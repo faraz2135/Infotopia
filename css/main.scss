@@ -1,0 +1,18 @@
+@import './variables';
+@import './header';
+@import './footer';
+
+
+.divider{
+    max-width: 742px;
+    width: 63.659%;
+    height: 1px;
+    margin: 100px auto 100px auto;
+    border-bottom: 4px solid $grey-5;
+}
+
+@media (min-width: 768px) and (max-width: 850px) {
+    .divider {
+        margin: 70px auto 70px auto;
+    }
+}

@@ -1,0 +1,24 @@
+@font-face {
+    font-family: 'Ample Soft Pro-Regular';
+    src: url('./fonts/FontsFree-Net-AmpleSoftPro.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    font-family: 'Ample Soft Pro-Medium';
+    src: url('./fonts/FontsFree-Net-AmpleSoftProMedium.ttf')  format('truetype'), /* Safari, Android, iOS */
+}
+
+$AmplesoftRegular: 'Ample Soft Pro-Regular';
+$AmplesoftMedium: 'Ample Soft Pro-Medium';
+
+$primary-1: #378B85;
+$primary-2: #449F98;
+$primary-3: #71B9AD;
+$primary-4: #ADDBD2;
+$grey-1: #464646;
+$grey-2: #868686;
+$grey-3: #B4B4B4;
+$grey-4: #D3D3D3;
+$grey-5: #F5F5F5;
+
+$semi-bold: 600;
+$medium: 500;
