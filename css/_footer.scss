@@ -327,3 +327,45 @@ footer{
         }
     }
 }
+
+@media (max-width: 575px){
+    footer{
+        .subscribe{
+            .left-side{
+                .title {
+                    font-size: 22px;
+                    line-height: 32px;
+                }
+                .subtitle {
+                    font-size: 11px;
+                    line-height: 24px;
+                }
+            }
+            .right-side{
+                .subscribe-form{
+                    .btn {
+                        width: 100px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+        .footer-area{
+            .footer-section{
+                .navigation{
+                    .logo-area{
+                        width: 75px;
+                    }
+                    .top-nav {
+                        padding-top: 95px;
+                        .toprow{
+                            a {
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

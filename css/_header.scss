@@ -18,6 +18,31 @@ header{
         .navigation{
             .navbar{
                 position: initial;
+                .toggler-box{
+                    .navbar-toggler {
+                        &:focus{
+                            color: rgba(55,139,133,.55);
+                            border-color: rgba(55,139,133,.1);
+                        }
+                    }
+                    .login{
+                        position: relative;
+                        padding-left: 15px;
+                        margin-left: 15px;
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            height: 41px;
+                            width: 3px;
+                            background: #f4f4f9;
+                            top: 0;
+                            left: 0;
+                            bottom: 0;
+                            margin: auto;
+                        }
+                    }
+                }
                 .nav-item{
                     .nav-link{
                         font-family: $AmplesoftMedium;
@@ -171,6 +196,128 @@ header{
                         }
                     }
                 }
+
+                .navbar-mobile{
+                    position: absolute;
+                    top: 99px;
+                    left: 0;
+                    width: 100%;
+                    background: #fff;
+                    margin: 0;
+                    padding: 0;
+                    border: 0;
+                    border-top: 1px solid $grey-4;
+                    border-top-left-radius: 0;
+                    border-top-right-radius: 0;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, 0.2);
+                    padding: 30px;
+
+                    -webkit-animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+                    animation: slide-top 0.3s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+                    @-webkit-keyframes slide-top {
+                        0% {
+                        -webkit-transform: translateY(0);
+                                transform: translateY(0);
+                        }
+                        100% {
+                        -webkit-transform: translateY(-15px);
+                                transform: translateY(-15px);
+                        }
+                    }
+                    @keyframes slide-top {
+                        0% {
+                        -webkit-transform: translateY(0);
+                                transform: translateY(0);
+                        }
+                        100% {
+                        -webkit-transform: translateY(-15px);
+                                transform: translateY(-15px);
+                        }
+                    }
+                    li{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        position: relative;
+                        .nav-link{
+                            font-family: $AmplesoftMedium;
+                            font-weight: 500;
+                            font-size: 16px;
+                            letter-spacing: 0.1em;
+                            line-height: 25px;
+                            text-transform: uppercase;
+                            color: #868686;
+
+                            .icon{
+                                margin-left: 14px;
+                            }
+                            
+                            &:hover{
+                                color: $primary-3;
+                            }
+                        }
+                        .dropdown{
+                            position: initial;
+                            .dropdown-menu{
+                                width: 100%;
+                                .column{
+                                    min-width: 170px;
+        
+                                    .column-head{
+                                        position: relative;
+                                        p{
+                                            font-family: $AmplesoftRegular;
+                                            font-size: 16px;
+                                            line-height: 40px;
+                                            text-align: center;
+                                            color: $grey-1;
+                                            padding-bottom: 10px;
+                                            margin: 0;
+        
+                                            &::after{
+                                                content: '';
+                                                position: absolute;
+                                                bottom: 0;
+                                                left: 0;
+                                                right: 0;
+                                                margin: auto;
+                                                width: 70px;
+                                                height: 3px;
+                                                background: $grey-5;
+                                            }
+                                        }
+                                    }
+                                    
+                                    ul{
+                                        padding-top: 15px;
+                                        padding-left: 0;
+                                        margin: 0;
+                                        
+                                        li{
+                                            list-style: none;
+                                            text-align: center;
+        
+                                            .dropdown-item{
+                                                font-family: $AmplesoftRegular;
+                                                font-weight: normal;
+                                                font-size: 14px;
+                                                text-align: center;
+                                                color: rgba(70, 70, 70, 0.97);
+                                            }
+                                        }
+                                    }
+        
+                                    &:last-child{
+                                        margin-right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     } 
@@ -185,5 +332,52 @@ header{
         border-bottom-left-radius: 10px;
         border-bottom-right-radius: 10px;
         z-index: 1;
+    }
+}
+
+@media (max-width: 1200px){
+    header{
+        .head {
+            padding: 0 20px;
+            .navigation{
+                .navbar{
+                    .nav-item{
+                        .nav-link {
+                            padding: 0 0 0 20px;
+                        }
+                        .login {
+                            margin-left: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 575px){
+    header{
+        .head{
+            .logo-area{
+                max-width: 115px;
+            }
+            .navigation{
+                .navbar{
+                    .toggler-box{
+                        .navbar-toggler{
+                            font-size: 16px;
+                        }
+                        .login{
+                            width: 35px;
+                            height: 26px;
+
+                            &::after {
+                                height: 35px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
     }
 }
